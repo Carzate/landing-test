@@ -7,7 +7,8 @@
     <title>Los Pollos Hermanos</title>
   </head>
   <body>
-    <section class="hero">
+    <section class="hero" id="info">
+      <div class="hero-color"></div>
       <video loop muted autoplay preload="auto" class="hero-video">
         <source src="./src/assets/videos/hero-video.mp4" type="video/mp4">
         Your browser does not support the video tag.  
@@ -15,11 +16,11 @@
 
       <header>
         <div class="header">
-          <div class="hero-color"></div>
           <img src="./src/assets/images/header/lph-logo.png" alt="pollos hermanos" width="90px">
           <ul>
-            <li><a href="#">Menu</a></li>
-            <li><a href="#">Location</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#location">Location</a></li>
           </ul>
         </div>
       </header>
@@ -27,12 +28,12 @@
       <div class="hero-content">
         <h1>Order fried chicken now</h1>
         <h2>Get famous chicken however you want it.</h2>
-        <a href="#">Order now</a>
+        <button href="#" class="primary-button">Order now</button>
       </div>
     </section>
 
     <section>
-      <div class="container">
+      <div class="container section-icons">
         <div class="my-20 space-icons">
           <img src="./src/assets/images/icons/hamburger.svg" width="120px">
           <img src="./src/assets/images/icons/beer.svg" width="120px">
@@ -40,21 +41,48 @@
           <img src="./src/assets/images/icons/french-fries.svg" width="120px">
         </div>
         <p class="title-section text-center">Choose and enjoy</p>
-        <!-- <div>
-          <div>
-            <img src="./src/assets/images/gastro/gasto-item-french-fries.jpg" width="70%" class="rotate-img" style="margin-right: 15%;">
-          </div>
-          <div class="flex-end">
-            <img src="./src/assets/images/gastro/gasto-item-beer.jpg" width="70%" class="rotate-img" style="margin-top: -30%;">
-          </div>
-        </div> -->
       </div>
     </section>
 
-    <section class="container menu">
+    <section class="container menu" id="menu">
       <h2 class="design-h2 text-center">Our Menu</h2>
       <div class="menu-grid" id="output"></div>
     </section>
+
+    <section class="location" id="location">
+        <div class="text">
+          <h4>New Los Pollos Hermanos restaurant in Madrid!</h4>
+          <p>The first establishment in Spain to incorporate the new company image. The restaurants sporting the new image have been warmly welcomed by the public, with growth above 30% in those premises with the new Los Pollos Hermanos identity.
+          Los Pollos Hermanos, flagship brand of Eat Out restoration group, announced the opening its first restaurant in Madrid, at <b>Puerta de Alcalá.</b></p>
+          <div class="my-20">
+            <a href="https://www.google.com/maps/place/C.+de+Valenzuela,+4,+28014+Madrid/@40.4189232,-3.6896672,19z/data=!3m1!4b1!4m5!3m4!1s0xd42289b8d392581:0x32bfed1206105c2b!8m2!3d40.4189232!4d-3.68912" target="_blank">
+              Get directions
+            </a>
+          </div>
+        </div>
+        <div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.3863202510491!2d-3.6891200000000013!3d40.418923199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289b8d392581%3A0x32bfed1206105c2b!2sC.%20de%20Valenzuela%2C%204%2C%2028014%20Madrid%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2smx!4v1658421414108!5m2!1ses-419!2smx" width="600" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <section class="section-partners">
+      <div class="container partners-inner">
+        <div class="d-flex">
+          <p>In partnership with:</p>
+          <img src="./src/assets/images/general/fever-logo.svg" alt="">
+        </div>
+        <div class="d-flex">
+          <p>Event by:</p>
+          <img src="./src/assets/images/header/lph-logo.png" alt="" width="36px">
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer">
+        <p>© 2022 LPH / Los pollos hermanos. All Rights Reserved. Los Pollos Hermanos is an original license. <span>Privacy policy</span> </p>
+      </div>
+    </footer>
 
     <!-- Do not edit below this line -->
     <script type="module" src="/src/main.js"></script>

@@ -29,3 +29,13 @@ for(let product of menu.menuList){
 }
 placeholder.innerHTML = out
 
+var className = "inverted";
+var scrollTrigger = 60;
+
+window.onscroll = function() {
+  if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+    document.getElementsByClassName("header")[0].classList.add(className);
+  } else {
+    document.getElementsByClassName("header")[0].classList.remove(className);
+  }
+};

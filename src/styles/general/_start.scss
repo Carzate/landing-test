@@ -11,15 +11,19 @@
   }
 
   body { 
-    background-color: $c-blue-primary;
+    background-color: $c-white;
     font-family: $f-montserrat;
     font-weight: 400;
     color: $c-white;
   }
 
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
   //Header and hero section
   .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     padding: 20px;
@@ -39,6 +43,21 @@
     text-decoration: none;
     color: $c-white;
     font-size: 18px;
+  }
+
+  .header ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .inverted ul li a {
+    color: $c-black;
+  }
+
+  .inverted {
+    background-color: $c-white;
+    box-shadow: 0 3px 5px 0.3px rgba(0,0,0,0.1);
+    color: $c-black;
+    z-index: 99;
   }
 
   .hero {
@@ -73,14 +92,7 @@
     color: transparent;
   }
 
-  .hero-content a{
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    border: 2px solid $c-white;
-    color: $c-white;
-    padding: 14px 40px;
-    border-radius: 50px;
+  .hero-content button{
     margin-top: 30px;
     transition: 0.9s;
   }
@@ -89,10 +101,10 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -2;
   }
 
-  .header .hero-color {
+  .hero-color {
     background-color: rgba(0,0,0,0.5);
     z-index: -1;
     position: absolute;
@@ -115,6 +127,10 @@
     font-size: 60px;
     font-weight: 400;
     margin: 60px 0;
+  }
+
+  .section-icons {
+    background-color: $c-blue-primary;
   }
 
   section {
@@ -166,6 +182,66 @@
     filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(74deg) brightness(100%) contrast(106%);
   }
 
+  .location {
+    background-color: $c-orange;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 0 50%;
+  }
+
+  .location h4 {
+    padding-top: 40px;
+    font-size: 24px;
+  }
+  
+  .location p {
+    margin-top: 40px;
+    padding-right: 20px;
+  }
+
+  .location .text {
+    padding-left: 20px;
+  }
+
+  .location a {
+    text-decoration: none;
+    color: $c-white;
+  }
+
+  .location a:hover {
+    color: $c-yellow;
+    cursor: pointer;
+  }
+
+  .section-partners {
+    background-color: $c-blue-primary;
+  }
+
+  .partners-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section-partners img {
+    margin-left: 15px;
+  }
+
+  .section-partners p {
+    padding-top: 5px;
+  }
+
+  .footer {
+    color: $c-black;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+
+  .footer span {
+    text-decoration: underline;
+  }
+
   //General styles 
 
   .container {
@@ -191,6 +267,11 @@
     justify-content: flex-end;
   }
 
+  .flex-center {
+    display: flex;
+    justify-content: center;
+  }
+
   .color-yellow {
     color: $c-yellow;
   }
@@ -201,6 +282,19 @@
   
   .my-20 {
     margin: 20px 0;
+  }
+
+  .primary-button {
+    background-color: $c-orange;
+    border: none;
+    color: $c-white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
   }
 
 
