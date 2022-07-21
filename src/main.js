@@ -23,7 +23,11 @@ for(let product of menu.menuList){
                 <h4>${product.menuName}</h4>
                 <h4 class="color-orange">$${product.menuPrice}</h4>
             </div>
-                <p style="width:100%">${product.menuDescription}</p>
+                <p style="margin-bottom: 20px">${product.menuDescription}</p>
+                ${product.menuDiscount ? 
+                    `<span class="discount">Discount this month of 20% $${product.menuDiscount}</span>`
+                    : ''
+                }
             <div class="d-flex">
                 <p>Quantity:</p>
                 <input type="text" value="0" id="value${product.menuId}" onchange="calculateValue(${product.menuId})">
