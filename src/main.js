@@ -13,7 +13,7 @@ import './assets/fonts/Marcheile-Bold-Condensed.woff2';
  */
 
 let placeholder = document.querySelector("#output")
-let out = "";
+let out = ""
 
 for(let product of menu.menuList){
     out +=`
@@ -23,12 +23,18 @@ for(let product of menu.menuList){
                 <h4>${product.menuName}</h4>
                 <h4 class="color-orange">$${product.menuPrice}</h4>
             </div>
-            <p style="width:100%">${product.menuDescription}</p>
+                <p style="width:100%">${product.menuDescription}</p>
+            <div class="d-flex">
+                <p>Quantity:</p>
+                <input type="text" value="0" id="value${product.menuId}" onchange="calculateValue(${product.menuId})">
+                <p class="total">Total: <span id="total${product.menuId}">$0</span></p>
+            </div>
         </div>
     `
 }
 placeholder.innerHTML = out
 
+//header function
 var className = "inverted";
 var scrollTrigger = 60;
 

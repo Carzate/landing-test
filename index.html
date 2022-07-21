@@ -47,6 +47,7 @@
     <section class="container menu" id="menu">
       <h2 class="design-h2 text-center">Our Menu</h2>
       <div class="menu-grid" id="output"></div>
+      <div id="menu-total"></div>
     </section>
 
     <section class="location" id="location">
@@ -84,6 +85,33 @@
       </div>
     </footer>
 
+    <script>
+      let totalPrice = 0
+
+      function calculateValue(val){
+        let inputPrice = document.querySelector(`#value${val}`).value
+        let prices = [10, 9, 2.2, 12, 0.36, 8]
+        let outputPrice = inputPrice * prices[val].toFixed(1)
+        let price = document.getElementById(`total${val}`)
+        price.innerHTML = '$' + outputPrice
+        totalPrice = totalPrice + outputPrice
+        document.querySelector(`#value${val}`).disabled = true
+
+        calculateTotal(totalPrice)
+      }
+
+      function calculateTotal(totalPrice){
+        let placeholder = document.getElementById("menu-total")
+        let out = ""
+
+        out +=`
+          <div class="menu-total">
+            Total Price: $${totalPrice.toFixed(1)}
+          </div>
+        `
+        placeholder.innerHTML = out
+      }
+    </script>
     <!-- Do not edit below this line -->
     <script type="module" src="/src/main.js"></script>
   </body>

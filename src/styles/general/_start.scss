@@ -147,6 +147,13 @@
     width: 80%;
   }
 
+  .menu-total{
+    margin-left: 50px;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: $c-orange;
+  }
+
   .menu-price {
     display: flex;
     justify-content: space-between;
@@ -161,8 +168,18 @@
     font-size: 16px;
     margin-top: 15px;
     font-family: $f-roboto;
-    width: 70%;
     color: #808080;
+  }
+
+  input {
+    width: 10%;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 5px 10px;
   }
 
   .menu-grid {
@@ -296,7 +313,6 @@
     font-weight: 700;
     font-size: 16px;
   }
-
 
   @keyframes slideUp {
     0% {
