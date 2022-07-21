@@ -1,71 +1,223 @@
-/****************************************************************
-          ERASE THIS FILE BEFORE STARTING YOUR CHALLENGE 
-*****************************************************************/
-  
- body {
-    background-image: url('assets/images/general/introduction-bg-ERASE-ME.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;  
-    background-color: $c-fever-blue-dark;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }  
+
+  img {
+    height: auto;
+    object-fit: contain;
+    object-position: bottom;
+  }
+
+  body { 
+    background-color: $c-blue-primary;
     font-family: $f-montserrat;
     font-weight: 400;
+    color: $c-white;
   }
 
- .erasable-container {
+  //Header and hero section
+  .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 40px;
+  }
+
+  .header ul li a {
+    text-decoration: none;
+    color: $c-white;
+    font-size: 18px;
+  }
+
+  .hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin: 50px auto;    
-    width: 100%;
-    max-width: 490px;
-    border-radius: 5px;
-    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    color: $c-white;
-    background: $c-fever-blue-gradient;
-
-  .welcome {
-    text-align: center;
-    margin: 32px 0;
-    font-family: monospace;
   }
 
-  .logo-container {
-    width: 100%;
-    background-color: $c-fever-blue-dark;
-    box-sizing: border-box;
-    padding: 24px 0;
+  .hero-content {
     text-align: center;
-    
-    .logo {
-      display: block;
-      width: 150px;
-      margin: 20px auto 8px auto;
+    z-index: 3;
+  }
+
+  .hero-content h1 {
+    font-size: 70px;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+
+  .hero-content h2 {
+    font-size: 30px;
+    font-weight: 500;
+    transition: 0.9s;
+  }
+
+  .hero-content h1:hover {
+    -webkit-text-stroke: 2px $c-white;
+    color: transparent;
+  }
+
+  .hero-content a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    border: 2px solid $c-white;
+    color: $c-white;
+    padding: 14px 40px;
+    border-radius: 50px;
+    margin-top: 30px;
+    transition: 0.9s;
+  }
+
+  .hero-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .header .hero-color {
+    background-color: rgba(0,0,0,0.5);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+      .hero-video {
+        width: auto;
+        height: auto;
+      }
+  }
+
+  //Section styles
+
+  .title-section {
+    font-size: 60px;
+    font-weight: 400;
+    margin: 60px 0;
+  }
+
+  section {
+    animation: slideIn 1.5s ease-in-out forwards;
+  }
+
+  .menu {
+    background-color: $c-white;
+    color: black;
+  }
+
+  .menu-item {
+    margin: 40px 0;
+    width: 80%;
+  }
+
+  .menu-price {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu-item h4 {
+    font-size: 24px;
+    margin-top: 15px;
+  }
+
+  .menu-item p {
+    font-size: 16px;
+    margin-top: 15px;
+    font-family: $f-roboto;
+    width: 70%;
+    color: #808080;
+  }
+
+  .menu-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    justify-items: center;
+  }
+
+  .space-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .space-icons img {
+    margin: 40px 0px 40px 80px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(74deg) brightness(100%) contrast(106%);
+  }
+
+  //General styles 
+
+  .container {
+    padding: 20px;
+  }
+
+  .design-h2 {
+    font-size: 60px;
+    color: $c-orange;
+    margin: 40px 0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .flex-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .color-yellow {
+    color: $c-yellow;
+  }
+
+  .color-orange {
+    color: $c-orange;
+  }
+  
+  .my-20 {
+    margin: 20px 0;
+  }
+
+
+  @keyframes slideUp {
+    0% {
+      transform: translateY(300px);
+    }
+    100% {
+      transform: translateY(0px);
     }
   }
   
-  .main-content {
-    padding: 0 32px 32px;
-    line-height: 1.4;
-    
-    p {
-      margin: 24px 0;  
+  @keyframes expand {
+    0% {
+      transform: translateX(1400px);
+    }
+    100% {
+      transform: translateX(0px);
     }
   }
-
-  header {
-    width: 100%;
-  }
-
-  code {
-    background-color: $c-fever-blue-primary;
-    border-radius: 8px;
-    line-height: 28px;
-    padding: 4px 8px;
-  }
-
-  strong {
-    color: #caf3ff;
-  }
-}
