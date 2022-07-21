@@ -205,6 +205,9 @@
       grid-template-columns: auto auto auto;
       padding: 0px;
     }
+    .location {
+      grid-template-columns: 50% 50%;
+    }
   }
 
   .space-icons {
@@ -220,9 +223,7 @@
 
   .location {
     background-color: $c-orange;
-    display: flex;
-    justify-content: space-between;
-    flex: 0 0 50%;
+    display: grid;
   }
 
   .location h4 {
@@ -334,6 +335,7 @@
   }
 
   iframe {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: 270px;
+    margin-bottom: -3px
   }
