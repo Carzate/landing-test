@@ -11,7 +11,6 @@ import './assets/fonts/Marcheile-Bold-Condensed.woff2';
  * import ./path/to/your/file.js
  *
  */
-
 let placeholder = document.querySelector("#output")
 let out = ""
 
